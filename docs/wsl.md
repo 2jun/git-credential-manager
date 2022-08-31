@@ -22,7 +22,7 @@ _Inside your WSL installation_, run the following command to set GCM as the Git
 credential helper:
 
 ```shell
-git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
 ```
 
 If you intend to use Azure DevOps you must _also_ set the following Git
@@ -64,7 +64,7 @@ After updating the `WSLENV` environment variable, restart your WSL installation.
 
 If you have installed GCM using the user-only installer (i.e, the `gcmuser-*.exe`
 installer and not the system-wide/admin required installer), you need to modify
-the above instructions to point to `/mnt/c/Users/<USERNAME>/AppData/Local/Programs/Git\ Credential\ Manager/git-credential-manager-core.exe`
+the above instructions to point to `/mnt/c/Users/<USERNAME>/AppData/Local/Programs/Git\ Credential\ Manager\ Core/git-credential-manager-core.exe`
 instead.
 
 ## How it works
@@ -102,7 +102,7 @@ installation, and not shared with others or the Windows host.
 Yes. Rather than install GCM as a Windows application (and have WSL Git invoke
 the Windows GCM), can you install GCM as a Linux application instead.
 
-To do this, simply follow the [GCM installation instructions for Linux](../README.md#linux-install-instructions).
+To do this, simply follow the [GCM installation instructions for Linux](../README.md#linux).
 
 **Note:** In this scenario, because GCM is running as a Linux application
 it cannot utilize authentication or credential storage features of the host
